@@ -1,0 +1,5 @@
+version: '3.7'
+services:
+  app:
+    env_file: ./.env.test.local
+    entrypoint: npm test

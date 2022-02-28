@@ -1,0 +1,13 @@
+{
+  "type": "mysql",
+  "host": "localhost",
+  "port": 3306,
+  "username": "nova_db",
+  "password": "NovaDB?12345:",
+  "database": "ecom",
+  "entities": ["src/db/entity/*.ts"],
+  "migrations": ["src/db/migration/*.ts"],
+  "cli": {
+      "migrationsDir": "src/db/migration"
+  }
+}

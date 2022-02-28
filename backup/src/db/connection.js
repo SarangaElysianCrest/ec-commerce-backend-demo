@@ -1,0 +1,1 @@
+module.exports =  "mysql://root:zxv@localhost/eccommerce" 

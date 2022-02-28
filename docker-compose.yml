@@ -1,0 +1,32 @@
+version: '3.7'
+services:
+  app:
+    build:
+      context: .
+    env_file: ./.env.local
+    volumes:
+      - .:/usr/src/app/
+      - /usr/src/app/node_modules/bcrypt/
+    depends_on: 
+      - redis
+      - db
+    ports: 
+      - 5000:8080
+    entrypoint: npm run dev
+  redis:
+    image: redis:5.0
+    volumes:
+      - memdata:/data
+  db:
+    image: postgres:11.0
+    environment:
+      POSTGRES_PASSWORD: rushcoderpwd
+      POSTGRES_USER: rushcoderuser
+      POSTGRES_DB: rushcoder
+      PGDATA: /var/lib/postgresql/data/local
+    volumes:
+      - dbdata:/var/lib/postgresql/data/local/
+
+volumes:
+  dbdata:
+  memdata:
