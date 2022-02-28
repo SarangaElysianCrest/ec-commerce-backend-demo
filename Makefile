@@ -25,7 +25,6 @@ stop-services:
 	docker rm ecom-mysql
 
 local-test:
-	npm run build
 	APP_SECRET=test \
 	APP_TOKEN_ISSUER=ec-ecom \
 	APP_SALT_ROUNDS=10 \
