@@ -38,8 +38,8 @@ local-test:
 	TYPEORM_PORT=3306 \
 	TYPEORM_SYNCHRONIZE=true \
 	TYPEORM_LOGGING=false \
-	TYPEORM_ENTITIES=dist/db/entity/*.js \
-	TYPEORM_MIGRATIONS=dist/db/migration/*.js \
+	TYPEORM_ENTITIES=dist/db/entity/*.ts \
+	TYPEORM_MIGRATIONS=dist/db/migration/*.ts \
 	TYPEORM_MIGRATIONS_DIR=dist/db/migration \
 	TYPEORM_MIGRATIONS_RUN=true \
 	npx nodemon ./src/server.ts
