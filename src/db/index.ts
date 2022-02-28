@@ -3,6 +3,7 @@ import { Connection, createConnection } from "typeorm";
 import { getLogger } from "../lib/logger";
 
 import UserRepository from "./repository/user.repository";
+import BrandRepository from "./repository/brand.repository";
 import CategoryRepository from "./repository/category.repository";
 import SubCategoryRepository from "./repository/subCategory.repository";
 import AttributeRepository from "./repository/attribute.repository";
@@ -22,6 +23,8 @@ import SearchRepository from "./repository/search.repository";
 
 export class DB {
   public readonly conn: Connection;
+
+  public readonly brandRepository: BrandRepository;
 
   public readonly categoryRepository: CategoryRepository;
   public readonly subCategoryRepository: SubCategoryRepository;
@@ -53,6 +56,8 @@ export class DB {
 
   constructor(conn: Connection) {
     this.conn = conn;
+
+    this.brandRepository = conn.getCustomRepository(BrandRepository);
 
     this.categoryRepository = conn.getCustomRepository(CategoryRepository);
     this.subCategoryRepository = conn.getCustomRepository(SubCategoryRepository);
