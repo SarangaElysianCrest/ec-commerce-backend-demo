@@ -8,7 +8,6 @@ import subCategoryRoute from './subCategory.route';
 import attributeRoute from "./attribute.route";
 import tagRoute from "./tag.route";
 
-import brandRoute from './brand.route';
 
 import productRoute from './product.route';
 import productImageRoute from './productImage.route';
@@ -33,7 +32,6 @@ router.use('/subcategory', subCategoryRoute);
 
 router.use('/user', userRoute);
 
-router.use('/brand', brandRoute);
 
 // router.use('/variant/attribute', productVariantAttributeRoute);
 router.use('/variant', variantRoute);
