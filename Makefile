@@ -25,24 +25,24 @@ stop-services:
 	docker rm ecom-mysql
 
 local-test:
-	npm run build
 	APP_SECRET=test \
 	APP_TOKEN_ISSUER=ec-ecom \
 	APP_SALT_ROUNDS=10 \
 	APP_DATA_FOLDER=./data \
-	TYPEORM_CONNECTION=mysql \
-	TYPEORM_HOST=harrowhousedb.cf63ao3evj3j.us-east-1.rds.amazonaws.com \
-	TYPEORM_USERNAME=admin \
-	TYPEORM_PASSWORD=NovaDB?12345: \
-	TYPEORM_DATABASE=harrowhousedb \
+	TYPEORM_CONNECTION=mariadb \
+	TYPEORM_HOST=localhost \
+	TYPEORM_USERNAME=root \
+	TYPEORM_PASSWORD=root \
+	TYPEORM_DATABASE=ecom \
 	TYPEORM_PORT=3306 \
 	TYPEORM_SYNCHRONIZE=true \
 	TYPEORM_LOGGING=false \
-	TYPEORM_ENTITIES=dist/db/entity/*.js \
-	TYPEORM_MIGRATIONS=dist/db/migration/*.js \
-	TYPEORM_MIGRATIONS_DIR=dist/db/migration \
+	TYPEORM_ENTITIES=src/db/entity/*.ts \
+	TYPEORM_MIGRATIONS=src/db/migration/*.ts \
+	TYPEORM_MIGRATIONS_DIR=src/db/migration \
 	TYPEORM_MIGRATIONS_RUN=true \
-	npx nodemon ./src/server.ts
+	TYPEORM_DROP_SCHEMA=true \
+	npm run test-local
 	
 local-dev:
 	APP_SECRET=test \
@@ -70,11 +70,11 @@ local-prod:
 	APP_TOKEN_ISSUER=ec-ecom \
 	APP_SALT_ROUNDS=10 \
 	APP_DATA_FOLDER=./data \
-	TYPEORM_CONNECTION=mysql \
-	TYPEORM_HOST=harrowhousedb.cf63ao3evj3j.us-east-1.rds.amazonaws.com \
-	TYPEORM_USERNAME=admin \
-	TYPEORM_PASSWORD=NovaDB?12345: \
-	TYPEORM_DATABASE=harrowhousedb \
+	TYPEORM_CONNECTION=mariadb \
+	TYPEORM_HOST=localhost \
+	TYPEORM_USERNAME=root \
+	TYPEORM_PASSWORD=root \
+	TYPEORM_DATABASE=ecom \
 	TYPEORM_PORT=3306 \
 	TYPEORM_SYNCHRONIZE=true \
 	TYPEORM_LOGGING=false \
@@ -82,7 +82,8 @@ local-prod:
 	TYPEORM_MIGRATIONS=dist/db/migration/*.js \
 	TYPEORM_MIGRATIONS_DIR=dist/db/migration \
 	TYPEORM_MIGRATIONS_RUN=true \
-	npm start	
+	npm start
+	
 remote-dev:
 	APP_SECRET=test \
 	APP_TOKEN_ISSUER=ec-ecom \
