@@ -30,10 +30,10 @@ local-test:
 	APP_SALT_ROUNDS=10 \
 	APP_DATA_FOLDER=./data \
 	TYPEORM_CONNECTION=mysql \
-	TYPEORM_HOST=harrowhousedb.cf63ao3evj3j.us-east-1.rds.amazonaws.com \
+	TYPEORM_HOST=ec-ecommerce.cu5j5htfcqrq.ap-southeast-1.rds.amazonaws.com \
 	TYPEORM_USERNAME=admin \
-	TYPEORM_PASSWORD=NovaDB?12345: \
-	TYPEORM_DATABASE=harrowhousedb \
+	TYPEORM_PASSWORD=ElysianCrest2018! \
+	TYPEORM_DATABASE=ecom \
 	TYPEORM_PORT=3306 \
 	TYPEORM_SYNCHRONIZE=true \
 	TYPEORM_LOGGING=false \
