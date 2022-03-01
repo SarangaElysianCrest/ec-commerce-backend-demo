@@ -1,6 +1,6 @@
 {
   "type": "mysql",
-  "host": "localhost",
+  "host": "harrowhousedb.cf63ao3evj3j.us-east-1.rds.amazonaws.com",
   "port": 3306,
   "username": "nova_db",
   "password": "NovaDB?12345:",
