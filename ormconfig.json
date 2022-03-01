@@ -2,9 +2,9 @@
   "type": "mysql",
   "host": "harrowhousedb.cf63ao3evj3j.us-east-1.rds.amazonaws.com",
   "port": 3306,
-  "username": "nova_db",
+  "username": "admin",
   "password": "NovaDB?12345:",
-  "database": "ecom",
+  "database": "harrowhousedb",
   "entities": ["src/db/entity/*.ts"],
   "migrations": ["src/db/migration/*.ts"],
   "cli": {
