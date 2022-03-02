@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest --config jestconfig.json --watchAll",
     "test-local": "jest --config jestconfig.json --watch",
-    "start": "node ./dist/server.js",
+    "start": "make remote-dev",
     "build": "tsc -p .",
     "dev": "NODE_ENV=development DEBUG=plant-db-backend:* nodemon ./src/server.ts",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
