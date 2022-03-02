@@ -11,7 +11,8 @@
     "dev": "NODE_ENV=development DEBUG=plant-db-backend:* nodemon ./src/server.ts",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json",
-    "typeorm:cli": "ts-node ./node_modules/typeorm/cli"
+    "typeorm:cli": "ts-node ./node_modules/typeorm/cli",
+    "make": "make local-dev"
   },
   "repository": {
     "type": "git",
