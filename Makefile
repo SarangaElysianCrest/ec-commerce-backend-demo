@@ -89,7 +89,7 @@ remote-dev:
 	APP_SALT_ROUNDS=10 \
 	APP_DATA_FOLDER=./data \
 	TYPEORM_CONNECTION=mysql \
-	TYPEORM_HOST=harrowhousedb.cf63ao3evj3j.us-east-1.rds.amazonaws.com \
+	TYPEORM_HOST=harrowhousedb.cdw46vhvik9d.ap-southeast-1.rds.amazonaws.com \
 	TYPEORM_USERNAME=admin \
 	TYPEORM_PASSWORD=NovaDB?12345: \
 	TYPEORM_DATABASE=harrowhousedb \
